@@ -6,6 +6,7 @@ const path = require('path');
 const Joi = require('joi');
 const request = require('request');
 const sgMail = require('@sendgrid/mail');
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -85,4 +86,4 @@ app.post('/send', (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(port);
