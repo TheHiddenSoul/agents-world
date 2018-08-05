@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Agents' World is dedicated to assist individuals interested in investing in Singapore properties. It specialises in property investment, such as the Watercove, a waterfront housing project. It proposes resale and rental properties in Singapore. For further details and information, please contact via website">
+    <meta name="author" content="Nick Harding">
+    <meta name="copyright" content="Agents' World">
+
+    <title>Agents' World</title>
+
+    <!-- Assets -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+    <link rel="shortcut icon" href="../public/assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../public/assets/favicon/apple-touch-icon-144x144.png" />
+
+    <!-- Proprietary -->
+    <link rel="stylesheet" href="../public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="../public/js/plugin.js"></script>
+    <script type="text/javascript" src="../public/js/scripts.js"></script>
+    <script src="https://use.fontawesome.com/ef7b6dd283.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123392568-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-123392568-1');
+    </script>
+    <!-- HTML5 shiv and Respond.js support IE8 or Older for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Home & Menu Section Start -->
+    <header id="home" class="scroll">
+
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#home">
+                        <span>
+                            <i class="fas fa-globe-asia" aria-hidden="true"></i>
+                        </span> AGENTS' WORLD -
+                        <em>For your Singapore property needs</em>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="#watercove">PROJECTS</a>
+                            </li>
+                            <li>
+                                <a href="#forSale">SALES</a>
+                            </li>
+                            <li>
+                                <a href="#forRent">RENT</a>
+                            </li>
+                        </ul>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">CONTACT</a>
+                            <ul id="login-dp" class="dropdown-menu wrapper animated bounceInRight">
+
+                                <li>
+                                    <div class="row">
+                                        <div id="form-contact-container">
+                                            <form class="form panel-body" action='send' method="POST">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="name" placeholder="Your name*" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" placeholder="Your email address*" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control" name="phone" placeholder="Your phone number*" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <select class="form-control" name="subject" required>
+                                                        <option value="" disabled selected hidden>Select a subject*</option>
+                                                        <option>Projects</option>
+                                                        <option>Sale</option>
+                                                        <option>Rental</option>
+                                                        <option>Others</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea placeholder="Please write us a message...*" class="form-control" name="message" rows="3" required></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="g-recaptcha" data-sitekey="6LfLFzQUAAAAAMiP_IpC3m7sBlbZdnkAJ-pkA3FU"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Send</button>
+                                                </div>
+                                                {{{msg}}}
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- Home & Menu Section End-->
+
+    <section class="scrolly home-section">
+        <div class="home-section-background" data-stellar-background-ratio="0.6" aria-label="singapore skyline agents world property real estate">
+            <div class="display-table">
+                <div class="display-table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="header-text">
+                                    <div>
+                                        <h1 class="head-presents">Welcome to your new home</h1>
+                                    </div>
+                                    <div>
+                                        <a class="button button-style" href="#watercove">Launch</a>
+                                    </div>
+                                    <div class="header-typing">
+                                        <span class="typing head-typing"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class='icon-scroll'></div> -->
+    </section>
+
+
+    <div class="our-title-image projects-image">
+        <img src="../public/assets/images/OurProjects.png" alt="Watercove Project - Our Projects - Singapore">
+    </div>
+
+    <!-- The watercove section -->
+    <!-- Full Page Image Background Carousel Header -->
+    <section id="watercove" class="scrolly header-image-container carousel slide">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#watercove" data-slide-to="0" class="active"></li>
+            <li data-target="#watercove" data-slide-to="1"></li>
+            <li data-target="#watercove" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+
+            <!-- Slide1 -->
+            <div class="fill header-image-slide1 item active">
+                <img class="project-banner" src="../public/assets/images/WatercoveBannerAlt2Blue.png" alt="Watercove Banne - Singapore">
+                <div class="header-circle header-design" data-toggle="modal" data-target="#modal-design">
+                    <div class="bubble-text">DESIGN</div>
+                </div>
+                <div class="header-circle header-invest" data-toggle="modal" data-target="#modal-invest">
+                    <div class="bubble-text">INVEST</div>
+                </div>
+                <div class="header-circle header-future" data-toggle="modal" data-target="#modal-future">
+                    <div class="bubble-text">DEVELOP</div>
+                </div>
+            </div>
+
+            <!-- Modal Design-->
+            <div class="modal left fade" id="modal-design" tabindex="-1" role="dialog" aria-labelledby="modal-design">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="modal-label-design">Design concept</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul>
+                                <li>Resort like environment.</li>
+                                <li>Colonial black and white bungalows inspired.</li>
+                                <li>Modern waterfront terrace houses concept.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Invest -->
+            <div class="modal left fade" id="modal-invest" tabindex="-1" role="dialog" aria-labelledby="modal-label-invest">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="modal-label-invest">Investment potential</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul>
+                                <li>Rare few strata-titled landed housing with sea view.</li>
+                                <li>Low supply of landed properties in Singapore.</li>
+                                <li>Surrounding Sembawang area has development plans and potential yet to be capitalized.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Future-->
+            <div class="modal left fade" id="modal-future" tabindex="-1" role="dialog" aria-labelledby="modal-label-future">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="modal-label-future">Upcoming development</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul>
+                                <li>Expansion of MRT Train lines by 2019 and expressways by 2026.</li>
+                                <li>5 mall developments.</li>
+                                <li>Intratown cycling networks.</li>
+                                <li>Sembawang sports hub.</li>
+                                <li>Nature reserves and areas (Kranji).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Slide 2 -->
+            <div class="fill header-image-slide2 item">
+                <img class="project-banner" src="../public/assets/images/WatercoveBannerAlt2Blue.png" alt="Watercove Banner - Singapore">
+                <div class="header-circle header-quality" data-toggle="modal" data-target="#modal-quality">
+                    <div class="bubble-text">QUALITY</div>
+                </div>
+            </div>
+
+            <!-- Modal Quality-->
+            <div class="modal left fade" id="modal-quality" tabindex="-1" role="dialog" aria-labelledby="modal-label-quality">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="modal-label-quality">Premium fittings and finishes</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul>
+                                <li>Interior home elevators.</li>
+                                <li>Imported kitchen home appliances like Miele and De Dietrich.</li>
+                                <li>Designer brand bathroom fittings from Hansgrohe and Villeroy & Boch.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Slide 3 -->
+            <div class="fill header-image-slide3 item">
+                <img class="project-banner" src="../public/assets/images/WatercoveBannerAlt2Blue.png" alt="Watercove Banner - Singapore">
+                <div class="header-circle header-property" data-toggle="modal" data-target="#modal-property">
+                    <div class="bubble-text">PROPERTY</div>
+                </div>
+            </div>
+
+            <!-- Modal Property-->
+            <div class="modal left fade" id="modal-property" tabindex="-1" role="dialog" aria-labelledby="modal-label-property">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="modal-label-property">Facilities and the condominium.</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul class="noBulletList">
+                                <li>Pools and clubhouse facilities.</li>
+                                <li>A reputable and trustworthy developper with over 60 years of experience.</li>
+                                <li>For more detailed unit design types and floorplans, please download our brochure.</li>
+                            </ul>
+                            <a href="../public/assets/doc/brochure.pdf" download>
+                                <input type="button" class="btn btn-info brochure pull-right" value="Download brochure" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#watercove" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#watercove" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+        <a href="../public/assets/doc/brochure.pdf" download>
+            <input type="button" class="brochure-btn" value="Brochure" />
+        </a>
+    </section>
+
+    <div id="forSale" class="our-title-image sale-image">
+        <img src="../public/assets/images/ForSale.png" alt="For Sale - Property Real Estate - Singapore">
+    </div>
+
+    <section class="sectionForSaleForRent">
+
+        {{!-- First row --}}
+        <div class="call-outs-container">
+
+            <div class="call-out container">
+                <img class="example-image image lazy" data-src="../public/assets/flats/sale/killiney118/front/killineySale1.jpg" alt="Singapore Killiney - Property Real Estate" />
+                <div class="overlay subText">
+                    <div class="textTitle">Killiney 118</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/sale/killiney118/lg/ks1.jpg" data-lightbox="killiney1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Killiney 118</div>
+                    <div class="top-right text">S$ 2,013,000</div>
+                    <div class="middle text">Highest unit. Fully furnished.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>1+1 BR Appartment</li>
+                        <li>1 Bathroom</li>
+                        <li>915 sqft</li>
+                        <li>Freehold</li>
+                        <li>Modern and zen design</li>
+                        <li>Developped in 2012</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks2.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks3.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks4.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks5.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks6.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks7.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks8.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks9.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks10.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks11.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks12.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks13.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks14.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks15.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks16.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks17.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/killiney118/lg/ks18.jpg" data-lightbox="killiney1"
+                data-title=""></a>
+
+            <div class="call-out container">
+                <img class="example-image image lazy" data-src="../public/assets/flats/sale/trizon/front/trizonSale1.jpg" alt="Singapore The Trizon - Property Real Estate" />
+                <div class="overlay subText">
+                    <div class="textTitle">The Trizon</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/sale/trizon/lg/ts1.jpg" data-lightbox="trizon1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">The Trizon</div>
+                    <div class="top-right text">S$ 3,902,400</div>
+                    <div class="middle text">High floor, serene location in greeneries.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>4 BR Appartment</li>
+                        <li>4 bedrooms + 3 Bathrooms</li>
+                        <li>2168 sqft</li>
+                        <li>Partially Furnished</li>
+                        <li>Developped in 2013</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts2.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts3.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts4.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts5.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts6.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts7.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts8.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts9.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/trizon/lg/ts10.jpg" data-lightbox="trizon1"
+                data-title=""></a>
+
+            <div class="call-out container">
+                <img class="example-image image lazy" data-src="../public/assets/flats/sale/glades/front/gladesSale1.jpg" alt="Singapore The Glades - Property Real Estate" />
+                <div class="overlay subText">
+                    <div class="textTitle">The Glades</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/sale/glades/lg/gs1.jpg" data-lightbox="glades1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">The Glades</div>
+                    <div class="top-right text">S$ 1,350,000</div>
+                    <div class="middle text">Premium loft unit with 4.5m ceiling height.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>2 BR Appartment</li>
+                        <li>2 bedrooms + 1 Bathroom</li>
+                        <li>689 sqft</li>
+                        <li>Modern Furnishing</li>
+                        <li>Sea view</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs2.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs3.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs4.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs5.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs6.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs7.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs8.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs9.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs10.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs11.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs12.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs13.jpg" data-lightbox="glades1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/glades/lg/gs14.jpg" data-lightbox="glades1"
+                data-title=""></a>
+
+        </div>
+        {{!-- Second row --}}
+        <div class="call-outs-container">
+
+            <div class="call-out container">
+                <img class="image lazy" data-src="../public/assets/flats/rent/4seasons/front/4seasonsRent1.jpg" alt="Singapore Four Season - Property Real Estate"
+                />
+                <div class="overlay subText">
+                    <div class="textTitle">Four Seasons</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/rent/4seasons/lg/4r1.jpg" data-lightbox="4season1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Four Seasons</div>
+                    <div class="top-right text">S$ 8,500,000</div>
+                    <div class="middle text">Newly renovated in central districk 09.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>4+1 BR Appartment</li>
+                        <li>4 bedrooms + 1 Bathroom</li>
+                        <li>2874 sqft</li>
+                        <li>Premium quality kitchen</li>
+                        <li>Conveniently located</li>
+                        <li>Modern and zen design</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r2.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r3.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r4.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r5.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r6.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r7.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r8.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r9.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r10.jpg" data-lightbox="4season1"
+                data-title=""></a>
+
+            <div class="call-out container">
+                <img class="example-image image lazy" data-src="../public/assets/flats/sale/ocean/front/oceanSale1.jpg" alt="Singapore Oceanfront Sentosa Cove - Property Real Estate" />
+                <div class="overlay subText">
+                    <div class="textTitle">Oceanfront Sentosa Cove</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/sale/ocean/lg/os1.jpg" data-lightbox="ocean1" data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Oceanfront Sentosa Cove</div>
+                    <div class="top-right text">S$ 12,800,000</div>
+                    <div class="middle text">2 storey penthouse with a full and panoramic ocean view.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>4+1 BR Appartment</li>
+                        <li>4 bedrooms + 4 Bathrooms</li>
+                        <li>5985 sqft</li>
+                        <li>High ceiling</li>
+                        <li>Private pool</li>
+                        <li>Private lift access</li>
+                        <li>Bright and spacious</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os2.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os3.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os4.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os5.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+
+        </div>
+    </section>
+
+
+    <div id="forRent" class="our-title-image rent-image">
+        <img src="../public/assets/images/ToRent.png" alt="To Rent - Property Real Estate - Singapore">
+    </div>
+
+    <section class="sectionForSaleForRent">
+
+        {{!-- First row --}}
+        <div class="call-outs-container">
+
+            <div class="call-out container">
+                <img class="image lazy" data-src="../public/assets/flats/rent/killiney118/front/killineyRent1.jpg" alt="Singapore Killiney - Property Real Estate"
+                />
+                <div class="overlay subText">
+                    <div class="textTitle">Killiney 118</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/rent/killiney118/lg/ks1.jpg" data-lightbox="killineyRent1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Killiney 118</div>
+                    <div class="top-right text">S$ 4,000/m</div>
+                    <div class="middle text">Highest unit. Fully furnished.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>1+1 BR Appartment</li>
+                        <li>1 bedroom + 1 Bathroom</li>
+                        <li>915 sqft</li>
+                        <li>Freehold</li>
+                        <li>Modern and zen design</li>
+                        <li>Developped in 2012</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/kr2.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/kr3.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/kr4.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/kr5.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/kr6.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks4.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks5.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks7.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks8.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks9.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks11.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks12.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks14.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks15.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks17.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/killiney118/lg/ks18.jpg" data-lightbox="killineyRent1"
+                data-title=""></a>
+
+            <div class="call-out container">
+                <img class="image lazy" data-src="../public/assets/flats/rent/4seasons/front/4seasonsRent1.jpg" alt="Singapore Four Season - Property Real Estate"
+                />
+                <div class="overlay subText">
+                    <div class="textTitle">Four Seasons</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/rent/4seasons/lg/4r1.jpg" data-lightbox="4season1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Four Seasons</div>
+                    <div class="top-right text">S$ 14,000/m</div>
+                    <div class="middle text">Newly renovated in central districk 09.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>4+1 BR Appartment</li>
+                        <li>4 bedrooms + 1 Bathroom</li>
+                        <li>2874 sqft</li>
+                        <li>Premium quality kitchen</li>
+                        <li>Conveniently located</li>
+                        <li>Modern and zen design</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r2.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r3.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r4.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r5.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r6.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r7.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r8.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r9.jpg" data-lightbox="4season1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/4seasons/lg/4r10.jpg" data-lightbox="4season1"
+                data-title=""></a>
+
+            <div class="call-out container">
+                <img class="image lazy" data-src="../public/assets/flats/rent/astridMeadows/front/astridMeadowsRent1.jpg" alt="Singapore Astrid Meadows - Property Real Estate"
+                />
+                <div class="overlay subText">
+                    <div class="textTitle">Astrid Meadows</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/rent/astridMeadows/lg/amR1.jpg" data-lightbox="astridMeadowsRent1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Astrid Meadows</div>
+                    <div class="top-right text">S$ 9,000/m</div>
+                    <div class="middle text">Exclusive and family orientated development.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>2 BR Appartment</li>
+                        <li>2 Bedrooms + 2 Bathrooms</li>
+                        <li>2300 sqft</li>
+                        <li>Renovated for own use</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/astridMeadows/lg/amR2.jpg" data-lightbox="astridMeadowsRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/astridMeadows/lg/amR3.jpg" data-lightbox="astridMeadowsRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/astridMeadows/lg/amR4.jpg" data-lightbox="astridMeadowsRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/astridMeadows/lg/amR5.jpg" data-lightbox="astridMeadowsRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/astridMeadows/lg/amR6.jpg" data-lightbox="astridMeadowsRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/astridMeadows/lg/amR7.jpg" data-lightbox="astridMeadowsRent1"
+                data-title=""></a>
+
+        </div>
+        {{!-- Second row --}}
+        <div class="call-outs-container">
+
+            <div class="call-out container">
+                <img class="example-image image lazy" data-src="../public/assets/flats/sale/ocean/front/oceanSale1.jpg" alt="Singapore Oceanfront Sentosa Cove - Property Real Estate" />
+                <div class="overlay subText">
+                    <div class="textTitle">Oceanfront Sentosa Cove</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/sale/ocean/lg/os1.jpg" data-lightbox="ocean1" data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Oceanfront Sentosa Cove</div>
+                    <div class="top-right text">S$ 22,000/m</div>
+                    <div class="middle text">2 storey penthouse with a full and panoramic ocean view.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>4+1 BR Appartment</li>
+                        <li>4 bedrooms + 4 Bathrooms</li>
+                        <li>5985 sqft</li>
+                        <li>High ceiling</li>
+                        <li>Private pool</li>
+                        <li>Private lift access</li>
+                        <li>Bright and spacious</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os2.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os3.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os4.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/sale/ocean/lg/os5.jpg" data-lightbox="ocean1"
+                data-title=""></a>
+
+            <div class="call-out container">
+                <img class="image lazy" data-src="../public/assets/flats/rent/nassim/front/nassimRent1.jpg" alt="Singapore Nassim Road - Property Real Estate"
+                />
+                <div class="overlay subText">
+                    <div class="textTitle">Nassim Road</div>
+                    <a class="example-image-link top-left text" href="../public/assets/flats/rent/nassim/lg/nr1.jpg" data-lightbox="nassimRent1"
+                        data-title="">
+                        <i class="fa fa-camera"></i>
+                        <span class="giveMeSpaceOnLeft">Photos</span>
+                    </a>
+                    <div class="center text">Nassim Road</div>
+                    <div class="top-right text">S$ 25,000/m</div>
+                    <div class="middle text">Good class bungalow in Nassim Road.</div>
+                    <ul class="bottom-left text noBulletList">
+                        <li>6 BR Appartment</li>
+                        <li>6 bedrooms + 9 Bathrooms</li>
+                        <li>10,000 sqft</li>
+                        <li>Near Orchard road</li>
+                        <li>Near botanical gardens</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/nassim/lg/nr2.jpg" data-lightbox="nassimRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/nassim/lg/nr3.jpg" data-lightbox="nassimRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/nassim/lg/nr4.jpg" data-lightbox="nassimRent1"
+                data-title=""></a>
+            <a class="example-image-link lightboxOverlay" href="../public/assets/flats/rent/nassim/lg/nr5.jpg" data-lightbox="nassimRent1"
+                data-title=""></a>
+
+
+        </div>
+    </section>
+
+    <div class="navbar navbar-default navbar-inverse navbar-bottom">
+        <div class="container">
+            <p class="navbar-text pull-left">© 2018 - Agents' World.</p>
+        </div>
+
+
+    </div>
+
+
+    <!-- Email sent -->
+    <div class="modal fade" id="postresultgo" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="alert alert-success" role="alert">
+                <p>
+                    <strong>Thank you!</strong>
+                </p>
+                Your message has been sent. We will get back to you as soon as possible.
+            </div>
+            <button type="button" class="btn btn-success btn-block popconf" data-dismiss="modal">Ok</button>
+        </div>
+    </div>
+
+    <!-- Email error -->
+    {{!--
+    <div class="modal fade" id="postresultnogo" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="alert alert-danger" role="alert">
+                <p>
+                    <strong>Aw!</strong>
+                </p>
+                Something went wrong. Your email was not sent. Please try again.
+            </div>
+            <button type="button" class="btn btn-danger btn-block popconf" data-dismiss="modal">Ok</button>
+        </div>
+    </div> --}}
+
+    <!-- Back to Top Start -->
+    <a href="#" class="scroll-to-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+</body>
+
+</html>
