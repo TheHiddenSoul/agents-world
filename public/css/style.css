@@ -236,22 +236,20 @@ body.loaded #preloader {
   height: auto;
   width: 35%;
   margin: auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  /* padding-top: 40px;
+  padding-bottom: 40px; */
 }
 
 .projects-image {
   width: 35%;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-.sale-image {
+.sale-rent-image {
   width: 18%;
-  padding-top: 70px;
-}
-
-.rent-image {
-  width: 18%;
-  padding-top: 70px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .intersection-title {
@@ -559,7 +557,7 @@ body.loaded #preloader {
 .project-banner {
   display: flex;
   height: auto;
-  width: 10%;
+  width: 17%;
   position: relative;
   top: 8%;
   left: 1%;
@@ -709,6 +707,10 @@ body.loaded #preloader {
 *******************************/
 .modal-open .modal {
   z-index: 9999;
+}
+
+.modal-close-button {
+  font-size: 26px;
 }
 
 .modal.left .modal-dialog {
@@ -1177,6 +1179,24 @@ body.loaded #preloader {
   .modal.left .modal-content {
     height: 88%;
   }
+  .brochure-btn {
+    bottom: 8px;
+    right: 8px;
+    width: 106px;
+    height: 50px;
+    border: 1px solid #fff;
+    z-index: 1000;
+  }
+  .projects-image {
+    width: 70%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .sale-rent-image {
+    width: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 @media only screen and (max-width: 555px) {
   .home-section-background {
@@ -1318,6 +1338,19 @@ body.loaded #preloader {
   .modal.left .modal-content {
     height: 67%;
   }
+  .project-banner {
+    width: 39%;
+    top: 10%;
+  }
+  .call-outs-container {
+    margin: 0;
+  }
+  .call-out {
+    margin-bottom: 10px;
+  }
+  .navbar-fixed-top .navbar-collapse {
+    max-height: 100vh;
+  }
 }
 /* Contact Form */
 #login-dp {
@@ -1329,6 +1362,7 @@ body.loaded #preloader {
 #login-dp .form-group {
   margin-bottom: 10px;
 }
+
 @media (max-width: 768px) {
   #login-dp {
     background-color: inherit;
@@ -1397,7 +1431,7 @@ html.lb-disable-scrolling {
 }
 
 .lb-outerContainer:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -1438,7 +1472,8 @@ html.lb-disable-scrolling {
   background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 }
 
-.lb-prev, .lb-next {
+.lb-prev,
+.lb-next {
   height: 100%;
   cursor: pointer;
   display: block;
@@ -1490,7 +1525,7 @@ html.lb-disable-scrolling {
 }
 
 .lb-dataContainer:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
@@ -1545,4 +1580,8 @@ html.lb-disable-scrolling {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+.navbar-text {
+  float: none !important;
 }

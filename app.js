@@ -9,11 +9,15 @@ const sgMail = require('@sendgrid/mail');
 const port = process.env.PORT || 3000;
 
 const app = express();
+const compression = require('compression');
+
+app.use(compression());
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/views', express.static(path.join(__dirname, 'views')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
