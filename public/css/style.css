@@ -559,8 +559,10 @@ body.loaded #preloader {
   height: auto;
   width: 17%;
   position: relative;
-  top: 8%;
+  top: 1%;
   left: 1%;
+  border: 1px solid #fff;
+  padding: 1px;
 }
 
 .header-image-container {
@@ -1224,6 +1226,11 @@ body.loaded #preloader {
     padding: 0 !important;
     border: 1px solid #fff;
   }
+  .project-banner {
+    top: 1%;
+    left: 2%;
+    width: 66%;
+  }
   /* #contact-form {
         width: 100vw !important;
         height: 100vh !important;
@@ -1337,10 +1344,6 @@ body.loaded #preloader {
 
   .modal.left .modal-content {
     height: 67%;
-  }
-  .project-banner {
-    width: 39%;
-    top: 10%;
   }
   .call-outs-container {
     margin: 0;
