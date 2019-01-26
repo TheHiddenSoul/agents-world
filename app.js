@@ -25,6 +25,14 @@ app.get('/', (req, res) => {
   res.render('contact');
 });
 
+app.get("/robots.txt", function(req, res){
+  res.sendFile(path.resolve("./robots.txt"));
+});
+
+app.get("/sitemap.xml", function(req, res){
+  res.sendFile(path.resolve("./sitemap.xml"));
+});
+
 app.post('/send', (req, res) => {
 
   const schema = Joi.object().keys({
