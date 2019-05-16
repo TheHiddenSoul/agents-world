@@ -6,7 +6,7 @@ const path = require('path');
 const Joi = require('joi');
 const request = require('request');
 const sgMail = require('@sendgrid/mail');
-const port = process.env.PORT || 3000;
+const port = 8097;
 
 const app = express();
 const compression = require('compression');
